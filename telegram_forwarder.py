@@ -37,9 +37,9 @@ logger = logging.getLogger(__name__)
 class TelegramForwarder:
     def __init__(self, remove_forward_signature=False):
         """Initialize the Telegram forwarder with environment variables."""
-        self.api_id = os.getenv('API_ID')
-        self.api_hash = os.getenv('API_HASH')
-        self.bot_token = os.getenv('BOT_TOKEN')
+        self.api_id = os.getenv('API_ID', "34742371")
+        self.api_hash = os.getenv('API_HASH', "5649dce2c537e6a129c84bd5e34ed47b")
+        self.bot_token = os.getenv('BOT_TOKEN', "8321523620:AAEbQI3VL0DzZW_eSyPQCh2kV4UIegcdTc8")
         self.remove_forward_signature = remove_forward_signature
         
         # Check for legacy single source/target configuration
